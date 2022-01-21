@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <Rudder/Rudder.h>
 
-@import FirebaseCore;
-@import FirebaseAnalytics;
+#import <FirebaseCore/FirebaseCore.h>
+#import <FirebaseAnalytics/FirebaseAnalytics.h>
 
 
 
