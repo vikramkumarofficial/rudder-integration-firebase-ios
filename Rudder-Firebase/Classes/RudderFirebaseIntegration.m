@@ -212,16 +212,19 @@
             }
             if ([value isKindOfClass:[NSNumber class]]) {
                 [params setValue:[NSNumber numberWithDouble:[value doubleValue]] forKey:firebaseKey];
-                continue;
             }
             else if([value isKindOfClass:[NSString class]]) {
                 if ([value length] > 100) {
                     value = [value substringToIndex:[@100 unsignedIntegerValue]];
                 }
-                [params setValue:[NSString stringWithFormat:@"%@", properties[key]] forKey:firebaseKey];
-                continue;
+                [params setValue:value forKey:firebaseKey];
+            } else {
+                NSString *convertedString = [NSString stringWithFormat:@"%@", value];
+                // if length exceeds 100, don't send the property
+                if ([convertedString length] <= 100) {
+                    [params setValue:convertedString forKey:firebaseKey];
+                }
             }
-            [params setValue:value forKey:firebaseKey];
         }
     }
 }
