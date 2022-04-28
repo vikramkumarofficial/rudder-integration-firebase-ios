@@ -16,7 +16,7 @@ Questions? Please join our [Slack channel](https://resources.rudderstack.com/joi
 2. Rudder-Firebase is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile and followed by `pod install`:
 
 ```ruby
-pod 'Rudder-Firebase'
+pod 'Rudder-Firebase', '>=2.0.4'
 ```
 
 3. Download the `GoogleService-Info.plist` from your Firebase console and put it in your project.
