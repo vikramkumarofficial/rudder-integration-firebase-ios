@@ -11,14 +11,14 @@ Questions? Please join our [Slack channel](https://resources.rudderstack.com/joi
 
 ## Integrating Firebase with the RudderStack iOS SDK
 
-> **_NOTE:_** `Rudder-Firebase` version `3.0.0` is compatible with the `FirebaseAnalytics` version `10.3.0`. 
+> **_NOTE:_** `Rudder-Firebase` version `3.1.0` is compatible with the `FirebaseAnalytics` version `10.3.0`. 
 
 1. Add [Firebase](http://firebase.google.com) as a destination in the [RudderStack dashboard](https://app.rudderstack.com/).
 
 2. Rudder-Firebase is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile and followed by `pod install`:
 
 ```ruby
-pod 'Rudder-Firebase', '~> 3.0.0'
+pod 'Rudder-Firebase', '~> 3.1.0'
 ```
 
 3. Download the `GoogleService-Info.plist` from your Firebase console and put it in your project.
@@ -33,6 +33,12 @@ RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
 [builder withLoglevel:RSLogLevelDebug];
 [RSClient getInstance:WRITE_KEY config:[builder build]];
 ```
+
+## Setup the sample iOS app
+
+1. Make a copy of the `SampleRudderConfig.plist` into the RudderConfig directory and rename it to `RudderConfig.plist`.
+2. Fill the required details e.g., `WRITE_KEY` and `PROD_DATA_PLANE_URL`.
+3. Start sending the events
 
 ## Sending Events
 
