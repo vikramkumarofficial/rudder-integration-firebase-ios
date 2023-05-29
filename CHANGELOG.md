@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.1 (2023-05-29)
+
+
+### Bug Fixes
+
+* change the track_reserved_keyword variable name ([9629575](https://github.com/rudderlabs/rudder-integration-firebase-ios/commit/9629575eca681ab689df7e7387235f4683984ae3))
+
 ## 3.1.0 (2023-03-24)
 
 
