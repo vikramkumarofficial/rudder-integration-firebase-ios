@@ -10,7 +10,7 @@
 @implementation RudderUtils
 
 NSArray * IDENTIFY_RESERVED_KEYWORDS;
-NSArray *TRACK_RESERVED_KEYWORDS;
+NSArray *FIREBASE_TRACK_RESERVED_KEYWORDS;
 NSDictionary *ECOMMERCE_EVENTS_MAPPING;
 NSDictionary *PRODUCT_PROPERTIES_MAPPING;
 NSArray *EVENT_WITH_PRODUCTS_ARRAY;
@@ -20,7 +20,7 @@ NSArray *EVENT_WITH_PRODUCTS_AT_ROOT;
 + (void)initialize {
     IDENTIFY_RESERVED_KEYWORDS =  [[NSArray alloc] initWithObjects:@"age", @"gender", @"interest", nil];
     
-    TRACK_RESERVED_KEYWORDS = [[NSArray alloc] initWithObjects:@"product_id", @"name", @"category", @"quantity", @"price", @"currency", @"value", @"revenue", @"total", @"tax", @"shipping", @"coupon", @"cart_id", @"payment_method", @"query", @"list_id", @"promotion_id", @"creative", @"affiliation", @"share_via", @"products", @"order_id", kFIRParameterScreenName, nil];
+    FIREBASE_TRACK_RESERVED_KEYWORDS = [[NSArray alloc] initWithObjects:@"product_id", @"name", @"category", @"quantity", @"price", @"currency", @"value", @"revenue", @"total", @"tax", @"shipping", @"coupon", @"cart_id", @"payment_method", @"query", @"list_id", @"promotion_id", @"creative", @"affiliation", @"share_via", @"products", @"order_id", kFIRParameterScreenName, nil];
     
     ECOMMERCE_EVENTS_MAPPING = @{
         ECommPaymentInfoEntered : kFIREventAddPaymentInfo,
