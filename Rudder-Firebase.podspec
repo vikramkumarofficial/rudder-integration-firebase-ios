@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
   s.source_files = 'Rudder-Firebase/Classes/**/*'
-  # s.static_framework = true
+  s.static_framework = true
   s.ios.deployment_target = deployment_target
   
   if defined?($FirebaseSDKVersion)
