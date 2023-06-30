@@ -2,7 +2,7 @@ require 'json'
 
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
-firebase_sdk_version = '~> 10.6.0'
+firebase_sdk_version = '~> 10.9.0'
 rudder_sdk_version = '~> 1.12'
 deployment_target = '11.0'
 firebase_analytics = 'FirebaseAnalytics'
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/rudderlabs/rudder-integration-firebase-ios'
   s.license          = { :type => "Apache", :file => "LICENSE" }
   s.author           = { 'RudderStack' => 'arnab@rudderlabs.com' }
-  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-firebase-ios.git' , :tag => "v#{s.version}" }
+  s.source           = { :git => 'https://github.com/vikramkumarofficial/rudder-integration-firebase-ios.git'}
   
   s.requires_arc = true
   s.source_files = 'Rudder-Firebase/Classes/**/*'
